@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="" />
+    <!-- Favicon  -->
+    <link
+      rel="shortcut icon"
+      href="assets/images/bus-icon.png"
+      type="image/x-icon"
+    />
     <!-- Tailwind css and DaisyUI CDN  -->
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
@@ -12,16 +18,6 @@
     />
     <script src="https://cdn.tailwindcss.com"></script>
     <title>B-Ticket</title>
-    <!-- Module-Config File -->
-    <script>
-      module.exports = {
-        content: ["./src/**/*.{html,js}"],
-        theme: {
-          extend: {},
-        },
-        plugins: [],
-      };
-    </script>
     <!-- Imported Google Font-Family -->
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
@@ -33,7 +29,54 @@
   <body>
     <!-- Header Content  -->
     <header>
-      <h1 class="text-3xl font-bold">Hello World</h1>
+      <nav class="container mx-auto px-2 py-6">
+        <div class="navbar">
+          <div class="navbar-start">
+            <div class="dropdown">
+              <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h8m-8 6h16"
+                  />
+                </svg>
+              </div>
+              <ul
+                tabindex="0"
+                class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow rounded-box w-52 text-lg font-medium"
+              >
+                <li><a>Home</a></li>
+                <li><a>About</a></li>
+                <li><a>Destination</a></li>
+                <li><a>Search</a></li>
+              </ul>
+            </div>
+            <a class="cursor-pointer text-2xl font-extrabold">B-Ticket</a>
+          </div>
+          <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1 text-lg font-medium">
+              <li><a>Home</a></li>
+              <li><a>About</a></li>
+              <li><a>Destination</a></li>
+              <li><a>Search</a></li>
+            </ul>
+          </div>
+          <div class="navbar-end flex items-center gap-2">
+            <a
+              class="btn font-bold text-xl text-green-400 bg-green-100 border-green-300 hover:bg-green-200 hover:border-green-300"
+              >bus <img src="assets/images/bus-icon.png" alt=""
+            /></a>
+          </div>
+        </div>
+      </nav>
     </header>
     <!-- Main content  -->
     <main></main>
