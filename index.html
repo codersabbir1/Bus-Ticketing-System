@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html data-theme="light" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <!-- Tailwind css and DaisyUI CDN  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>B-Ticket</title>
+    <!-- Module-Config File -->
+    <script>
+      module.exports = {
+        content: ["./src/**/*.{html,js}"],
+        theme: {
+          extend: {},
+        },
+        plugins: [],
+      };
+    </script>
+    <!-- Imported Google Font-Family -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+      body {
+        font-family: "Raleway", sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header Content  -->
+    <header>
+      <h1 class="text-3xl font-bold">Hello World</h1>
+    </header>
+    <!-- Main content  -->
+    <main></main>
+    <!-- Footer Content -->
+    <footer></footer>
+    <!-- Custom JS  -->
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
