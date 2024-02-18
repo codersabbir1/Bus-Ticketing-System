@@ -20,9 +20,12 @@
     <title>B-Ticket</title>
     <!-- Imported Google Font-Family -->
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
       body {
         font-family: "Raleway", sans-serif;
+      }
+      .inter {
+        font-family: "Inter", sans-serif;
       }
     </style>
   </head>
@@ -79,7 +82,58 @@
       </nav>
     </header>
     <!-- Main content  -->
-    <main></main>
+    <main>
+      <!-- Banner section  -->
+      <section class="py-8 px-2">
+        <div
+          class="container mx-auto bg-[url(assets/images/banner.png)] bg-cover flex flex-col justify-center items-center pt-12 pb-24 text-center gap-6 rounded-3xl"
+        >
+          <h1 class="text-white text-5xl font-extrabold">
+            End-to-End Travel with
+            <span class="text-green-400 block pt-4">B Paribahan</span>
+          </h1>
+          <p class="text-white max-w-[690px] mx-auto">
+            Yes, you can run unit tests and view the results directly within the
+            app. The integrated testing features allow for a streamlined .
+          </p>
+          <button class="btn btn-success bg-green-400">Buy Tickets</button>
+        </div>
+        <div class="container mx-auto px-2">
+          <div class="flex gap-4 mx-auto justify-center -mt-11 inter">
+            <!-- Items 1 -->
+            <div
+              class="flex gap-2 py-6 px-8 justify-center items-center bg-white rounded-lg border-b-green-400 border-b-2"
+            >
+              <img src="assets/images/people.png" alt="" class="w-10" />
+              <div class="flex flex-col">
+                <h2 class="font-bold text-xl">500K+</h2>
+                <p class="text-xs">Registered users</p>
+              </div>
+            </div>
+            <!-- Items 2 -->
+            <div
+              class="flex gap-2 py-6 px-8 justify-center items-center bg-white rounded-lg border-b-green-400 border-b-2"
+            >
+              <img src="assets/images/ticket-cupon.png" alt="" class="w-10" />
+              <div class="flex flex-col">
+                <h2 class="font-bold text-xl">1.7 lacks</h2>
+                <p class="text-xs">Tickets sold</p>
+              </div>
+            </div>
+            <!-- Items 3 -->
+            <div
+              class="flex gap-2 py-6 px-8 justify-center items-center bg-white rounded-lg border-b-green-400 border-b-2"
+            >
+              <img src="assets/images/stoppage.png" alt="" class="w-10" />
+              <div class="flex flex-col">
+                <h2 class="font-bold text-xl">Tickets sold</h2>
+                <p class="text-xs">Rental partners</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
     <!-- Footer Content -->
     <footer></footer>
     <!-- Custom JS  -->
