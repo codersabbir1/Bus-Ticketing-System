@@ -25,32 +25,22 @@ let grandPrice = 0;
 let discountCoupon = false;
 let discount = 0;
 
-function submitForm() {
-  if (seatCounter > 0) {
-    return (submitBtn.disabled = false);
+// Event-Listeners
+couponBtn.addEventListener("click", function () {
+  if (couponField.value == coupon1) {
+    discountCoupon = true;
+    discount = 0.15;
+    return grandPriceCalculate(discount);
+  } else if (couponField.value == coupon2) {
+    discountCoupon = true;
+    discount = 0.2;
+    return grandPriceCalculate(discount);
   } else {
-    return (submitBtn.disabled = true);
+    couponField.classList.add("border-red-400");
   }
-}
+});
 
-function grandPriceCalculate(discount) {
-  parseInt(grandPrice);
-  grandPrice = grandPrice - grandPrice * discount;
-  document.getElementById(
-    "discountField"
-  ).innerHTML = `<p class="text-2xl text-center text-green-500 w-[100%] font-bold">You got ${
-    discount * 100
-  }% discount for 4 Seats</p>`;
-  setInitialValue();
-}
-function discountBtn() {
-  if (seatCounter === 4) {
-    return (couponBtn.disabled = false);
-  } else {
-    return (couponBtn.disabled = true);
-  }
-}
-
+// All Functions
 function setInitialValue() {
   availableSeats.textContent = totalSeats;
   perSeats.textContent = basicPrice;
@@ -75,6 +65,14 @@ function checkingSeat() {
   }
 }
 checkingSeat();
+
+function submitForm() {
+  if (seatCounter > 0) {
+    return (submitBtn.disabled = false);
+  } else {
+    return (submitBtn.disabled = true);
+  }
+}
 
 function addInfo(e) {
   seatCounter += 1;
@@ -122,16 +120,21 @@ function removeInfo(e) {
   submitForm();
 }
 
-couponBtn.addEventListener("click", function () {
-  if (couponField.value == coupon1) {
-    discountCoupon = true;
-    discount = 0.15;
-    return grandPriceCalculate(discount);
-  } else if (couponField.value == coupon2) {
-    discountCoupon = true;
-    discount = 0.2;
-    return grandPriceCalculate(discount);
+function grandPriceCalculate(discount) {
+  parseInt(grandPrice);
+  grandPrice = grandPrice - grandPrice * discount;
+  document.getElementById(
+    "discountField"
+  ).innerHTML = `<p class="text-2xl text-center text-green-500 w-[100%] font-bold">You got ${
+    discount * 100
+  }% discount for 4 Seats</p>`;
+  setInitialValue();
+}
+
+function discountBtn() {
+  if (seatCounter === 4) {
+    return (couponBtn.disabled = false);
   } else {
-    couponField.classList.add("border-red-400");
+    return (couponBtn.disabled = true);
   }
-});
+}
