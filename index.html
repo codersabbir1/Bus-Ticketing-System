@@ -96,7 +96,9 @@
             Yes, you can run unit tests and view the results directly within the
             app. The integrated testing features allow for a streamlined .
           </p>
-          <button class="btn btn-success bg-green-400">Buy Tickets</button>
+          <a href="#buyTicket" class="btn btn-success bg-green-400"
+            >Buy Tickets</a
+          >
         </div>
         <div class="container mx-auto px-2">
           <div class="flex gap-4 mx-auto justify-center -mt-11 inter">
@@ -179,6 +181,7 @@
 
       <!-- Bus-info Section  -->
       <section
+        id="buyTicket"
         class="pt-12 pb-4 mt-12 border-t-4 border-green-400 rounded-3xl bg-[#F7F8F8]"
       >
         <div class="container mx-auto px-2">
@@ -232,7 +235,9 @@
               class="text-center flex flex-col gap-2 justify-center items-center w-[30%]"
             >
               <img class="w-24" src="assets/images/fare.png" alt="" />
-              <h1 class="font-semibold text-4xl inter">550 Taka</h1>
+              <h1 id="perSeats" class="font-semibold text-4xl inter">
+                550 Taka
+              </h1>
               <p class="text-xl">Per Seat</p>
             </div>
           </div>
@@ -265,7 +270,7 @@
                     <span class="text-green-500">Selected</span>
                   </div>
                 </div>
-                <div class="grid grid-cols-5 gap-2 py-4 inter">
+                <div id="allSeats" class="grid grid-cols-5 gap-2 py-4 inter">
                   <div class="col-span-1 col-start-5 btn">
                     <img src="assets/images/steering-wheel.png" alt="" />
                   </div>
@@ -278,29 +283,24 @@
                     class="col-span-1 btn hover:bg-green-500 text-2xl"
                     type="button"
                     value="A1"
-                    id="A1"
                   />
                   <!-- Seats  -->
                   <input
                     class="col-span-1 btn hover:bg-green-500 text-2xl"
                     type="button"
                     value="A2"
-                    id="A2"
-                    id="A2"
                   />
                   <!-- Seats  -->
                   <input
                     class="col-span-1 btn hover:bg-green-500 text-2xl"
                     type="button"
                     value="A3"
-                    id="A3"
                   />
                   <!-- Seats  -->
                   <input
                     class="col-span-1 btn hover:bg-green-500 text-2xl"
                     type="button"
                     value="A4"
-                    id="A4"
                   />
                   <div class="col-span-1 btn text-2xl">
                     <span>B</span>
@@ -310,28 +310,24 @@
                     class="col-span-1 btn hover:bg-green-500 text-2xl"
                     type="button"
                     value="B1"
-                    id="B1"
                   />
                   <!-- Seats  -->
                   <input
                     class="col-span-1 btn hover:bg-green-500 text-2xl"
                     type="button"
                     value="B2"
-                    id="B2"
                   />
                   <!-- Seats  -->
                   <input
                     class="col-span-1 btn hover:bg-green-500 text-2xl"
                     type="button"
                     value="B3"
-                    id="B3"
                   />
                   <!-- Seats  -->
                   <input
                     class="col-span-1 btn hover:bg-green-500 text-2xl"
                     type="button"
                     value="B4"
-                    id="B4"
                   />
                   <div class="col-span-1 btn text-2xl">
                     <span>C</span>
@@ -341,28 +337,24 @@
                     class="col-span-1 btn hover:bg-green-500 text-2xl"
                     type="button"
                     value="C1"
-                    id="C1"
                   />
                   <!-- Seats  -->
                   <input
                     class="col-span-1 btn hover:bg-green-500 text-2xl"
                     type="button"
                     value="C2"
-                    id="C2"
                   />
                   <!-- Seats  -->
                   <input
                     class="col-span-1 btn hover:bg-green-500 text-2xl"
                     type="button"
                     value="C3"
-                    id="C3"
                   />
                   <!-- Seats  -->
                   <input
                     class="col-span-1 btn hover:bg-green-500 text-2xl"
                     type="button"
                     value="C4"
-                    id="C4"
                   />
                 </div>
               </div>
@@ -390,22 +382,16 @@
                   <h1>Class</h1>
                   <h1>Price</h1>
                 </div>
-                <div id="seatsInfo" class="py-4 px-3 text-xl">
-                  <div class="flex justify-between items-center">
-                    <p>A1</p>
-                    <p>Economy</p>
-                    <p>550</p>
-                  </div>
-                </div>
+                <div id="seatsInfo" class="py-4 px-3 text-xl"></div>
                 <div
                   class="flex justify-between items-center py-4 px-3 border-t-2 border-gray-300 border-solid text-2xl font-semibold"
                 >
                   <h1>Total</h1>
                   <h1 id="totalPrice">1100</h1>
                 </div>
-                <div class="join flex justify-between">
+                <div id="discountField" class="join flex justify-between">
                   <input
-                    id="couponFiel"
+                    id="couponField"
                     class="input input-bordered join-item w-[70%] text-2xl"
                     placeholder="Have any coupon?"
                   />
