@@ -1,6 +1,4 @@
-console.log("It's Working...");
 // Element Selectors
-
 const allSeats = document.querySelectorAll("#allSeats input");
 const availableSeats = document.getElementById("availableSeats");
 const perSeats = document.getElementById("perSeats");
@@ -18,7 +16,7 @@ const coupon2 = "Couple 20"; // for 20% Discount
 const basicPrice = 550;
 
 // changeable counting info
-let totalSeats = 12;
+let totalSeats = 20;
 let seatCounter = 0;
 let totalPrice = 0;
 let grandPrice = 0;
